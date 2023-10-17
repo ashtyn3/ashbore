@@ -1,0 +1,51 @@
+{
+  "name": "ashbore",
+  "module": "./dist/index.js",
+  "bin": "./src/cli/index.ts",
+
+  "type": "module",
+  "devDependencies": {
+    "@types/babel-core": "^6.25.8",
+    "@types/babel-traverse": "^6.25.8",
+    "@types/babel__generator": "^7.6.5",
+    "@types/babel__traverse": "^7.20.2",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/lib/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./jsx-runtime": {
+      "default": "./dist/lib/jsx.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "buildI": "bun build src/internal/index.js --outfile=dist/index.js",
+    "buildT": "tsc -d --declarationDir dist/lib --declarationMap --emitDeclarationOnly src/internal/index.ts"
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/generator": "^7.23.0",
+    "@babel/parser": "^7.23.0",
+    "@babel/plugin-proposal-decorators": "^7.23.0",
+    "@babel/traverse": "^7.23.0",
+    "@babel/types": "^7.23.0",
+    "@clack/core": "^0.3.3",
+    "@clack/prompts": "^0.7.0",
+    "@types/babel__core": "^7.20.2",
+    "@types/nanoid-dictionary": "^4.2.1",
+    "@types/yargs": "^17.0.28",
+    "babel": "^6.23.0",
+    "colors": "^1.4.0",
+    "happy-dom": "^12.9.0",
+    "nanoid": "^5.0.1",
+    "nanoid-dictionary": "^4.3.0",
+    "reflect-metadata": "^0.1.13",
+    "yargs": "^17.7.2"
+  }
+}

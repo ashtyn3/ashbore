@@ -1,0 +1,16 @@
+{
+  "name": "examples",
+  "module": "state.tsx",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "scripts": {
+    "ashbore": "ashbore build ./state.tsx"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0",
+    "ashbore": "../ashbore-build"
+  },
+  "dependencies": {}
+}
